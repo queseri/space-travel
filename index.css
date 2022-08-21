@@ -6,6 +6,10 @@
     --clr-dark: 230 35% 7%;
     --clr-light: 231 77% 90%;
     --clr-white: 0 0% 100%;
+    --fs-16: 1rem;
+    --fs-80: 5rem;
+    --ff-barlow: 'Barlow Condensed', sans-serif;
+    --ff-bellefair: 'Bellefair', serif;
 }
 
 /* ----------------------------------- */
@@ -59,6 +63,8 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    font-family: var(--ff-bellefair);
+    font-weight: 400;
 }
 
 /* A elements that don't have a class get default styles */
@@ -242,13 +248,14 @@ select {
 }
 
 .navbar-collapse {
-    background: hsla(0, 0%, 100%, 0.04); 
+    background: hsl(var(--clr-dark));
+    opacity: 0.9;
     display: none;
     position: absolute;
     height: 100vh;
     right: 0;
-    width: 50%;
-    top: 0;
+    width: 67%;
+    top: 2rem;
 }
 
 .navbar-toggler {
@@ -275,5 +282,52 @@ select {
 }
 
 .nav-link {
-	color: hsl(var(--clr-white));
+    color: hsl(var(--clr-white));
+    font-family: var(--ff-barlow);
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 2.7px;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    padding-block-start: 5rem;
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 2rem;
+    gap: 1.75rem;
+}
+
+.nav-item {
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    gap: 1rem;
+}
+
+.heading {
+    text-align: center;
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.heading span {
+    font-size: var(--fs-80);
+}
+
+.btn {
+    display: block;
+    font-size: 1.25rem;
+    border-radius: 50%;
+    border: none;
+    font-weight: 400;
+    height: 9.375rem;
+    width: 9.375rem;
+    margin-inline: auto;
+    margin-block: 2.5rem;
+    font-family: var(--ff-bellefair);
+    text-transform: uppercase;
 }
