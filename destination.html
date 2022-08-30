@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="./assets/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Bellefair&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./index.css">
+  <title>Space tourism website | Destination </title>
+</head>
+
+<body class="home destination bg-dark text-accent">
+  <div class="container">
+    <header>
+      <nav class="nav">
+        <a href="/">
+          <img src="./assets/shared/logo.svg" alt="space travel">
+        </a>
+        <!--mobile button menu control start-->
+        <button class="navbar-toggler menu-btn-js" type="button"
+          data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle menu navigation">
+          <img class="hamburger" src="./assets/shared/icon-hamburger.svg"
+            alt="">
+          <img class="close hide-icon-js" src="./assets/shared/icon-close.svg"
+            alt="">
+        </button>
+        <!--mobile button menu control end -->
+        <!--MAIN NAVIGATION START-->
+        <div class="collapse navbar-collapse bg-dark"
+          id="navbarSupportedContent">
+          <ul class="navbar-nav flex">
+            <li class="nav-item uppercase">
+              <span>00</span>
+              <a class="nav-link ff-barlow text-white letter-spacing-2 fs-14"
+                aria-current="page" href="./index.html">
+                Home
+              </a>
+            </li>
+            <li class="nav-item uppercase">
+              <span>01</span>
+              <a class="nav-link ff-barlow text-white letter-spacing-2 fs-14"
+                href="./destination.html">
+                Destination
+              </a>
+            </li>
+            <li class="nav-item uppercase">
+              <span>02</span>
+              <a class="nav-link ff-barlow text-white letter-spacing-2 fs-14"
+                aria-current="page" href="#">
+                Crew
+              </a>
+            </li>
+            <li class="nav-item uppercase">
+              <span>03</span>
+              <a class="nav-link ff-barlow text-white letter-spacing-2 fs-14"
+                aria-current="page" href="#">
+                Technology
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--MAIN NAVIGATION END-->
+      </nav>
+    </header>
+    <main class="main">
+      <div class="main-container">
+        <h1 class="heading uppercase">
+          01 Pick your destination
+        </h1>
+        <!--NAVIGATION TO SECTIONS - START-->
+        <div class="tabbed">
+          <ul role="tablist">
+            <li role="presentation">
+              <a role="tab" href="#section1" id="tab1"
+                aria-selected="true">Moon</a>
+            </li>
+            <li role="presentation">
+              <a role="tab" href="#section2" id="tab2">Mars</a>
+            </li>
+            <li role="presentation">
+              <a role="tab" href="#section3" id="tab3">Europa</a>
+            </li>
+            <li role="presentation">
+              <a role="tab" href="#section4" id="tab4">Titan</a>
+            </li>
+          </ul>
+          <!--NAVIGATION TO SECTIONS - END-->
+
+          <!--FIRST SECTION START - MARS FACTS-->
+          <section role="tabpanel" id="section1" aria-labelledby="tab1">
+            <h2>Moon</h2>
+            <picture>
+              <source srcset="./assets/destination/image-moon.webp"
+                type="image/webp">
+              <img src="./assets/destination/image-moon.png" alt="moon">
+            </picture>
+            <p class="main-content ff-barlow">
+              See our planet as you've never seen it before. A perfect relaxing
+              trip away to help
+              regain perspective and come back refreshed. While you're there,
+              take in some history
+              by visiting the Luna 2 and Apollo 11 landing sites.
+            </p>
+            <div class="extras">
+              <ul>
+                <li>
+                  Avg. distance
+                  384,400 km
+                </li>
+                <li>
+                  Est. travel time
+                  3 days
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--FIRST SECTION END - MOON FACTS -->
+
+          <!--SECOND SECTION START - MARS FACTS -->
+          <section role="tabpanel" id="section2" aria-labelledby="tab2">
+            <h2>Mars</h2>
+            <picture>
+              <source srcset="./assets/destination/image-mars.webp"
+                type="image/webp">
+              <img src="./assets/destination/image-mars.png" alt="moon">
+            </picture>
+            <p class="main-content ff-barlow">
+              Don't forget to pack your hiking boots. You'll need them to tackle
+              Olympus Mons,
+              the tallest planetary mountain in our solar system. It's two and a
+              half times
+              the size of Everest!
+            </p>
+            <div class="extras">
+              <ul>
+                <li>
+                  Avg. distance
+                  225 mil. km
+                </li>
+                <li>
+                  Est. travel time
+                  9 months
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--SECOND SECTION END - MARS FACTS -->
+
+          <!--THIRD SECTION START - EUROPA FACTS -->
+          <section role="tabpanel" id="section3" aria-labelledby="tab3">
+            <h2>Europa</h2>
+            <picture>
+              <source srcset="./assets/destination/image-europa.webp"
+                type="image/webp">
+              <img src="./assets/destination/image-europa.png" alt="moon">
+            </picture>
+            <p class="main-content ff-barlow">
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a
+              winter lover's dream. With an icy surface, it's perfect for a bit
+              of
+              ice skating, curling, hockey, or simple relaxation in your snug
+              wintery cabin.
+            </p>
+            <div class="extras">
+              <ul>
+                <li>
+                  Avg. distance
+                  628 mil. km
+                </li>
+                <li>
+                  Est. travel time
+                  3 years
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--THIRD SECTION END - EUROPA FACTS -->
+
+          <!--FOURTH SECTION START - TITAN FACTS -->
+          <section role="tabpanel" id="section4" aria-labelledby="tab4">
+            <h2>Titan</h2>
+            <picture>
+              <source srcset="./assets/destination/image-titan.webp"
+                type="image/webp">
+              <img src="./assets/destination/image-titan.png" alt="moon">
+            </picture>
+            <p class="main-content ff-barlow">
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan
+              is a home away from home (just a few hundred degrees colder!). As
+              a
+              bonus, you get striking views of the Rings of Saturn.
+            </p>
+            <div class="extras">
+              <ul>
+                <li>
+                  Avg. distance
+                  1.6 bil. km
+                </li>
+                <li>
+                  Est. travel time
+                  7 years
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--FOURTH SECTION ENDS - TITAN FACTS -->
+        </div>
+      </div>
+    </main>
+
+  </div>
+  <script src="./main.js"></script>
+  <script src="./tab.js"></script>
+</body>
+
+</html>

@@ -122,7 +122,7 @@ select {
 .flex {
     display: flex;
     gap: var(--gap, 1em);
-    flex-direction: column;   
+    flex-direction: column;
 }
 
 .grid {
@@ -212,8 +212,10 @@ select {
     text-transform: uppercase;
 }
 
+/*--------------------------------------------*/
 /* ----------------HOME PAGE----------------- */
-.home {   
+/*--------------------------------------------*/
+.home {
     background-image: url("./assets/home/background-home-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -226,7 +228,7 @@ select {
     align-items: center;
 }
 
-.navbar-collapse {   
+.navbar-collapse {
     opacity: 0.9;
     display: none;
     position: absolute;
@@ -263,7 +265,7 @@ select {
 
 .nav-link {
     position: relative;
-    font-size: var(--fs-14);   
+    font-size: var(--fs-14);
     font-weight: 400;
     line-height: 1.2;
     text-decoration: none;
@@ -288,13 +290,13 @@ select {
 }
 
 .navbar-nav {
-    padding-block-start: 5rem;    
+    padding-block-start: 5rem;
     padding-inline-start: 2rem;
     gap: 1.75rem;
 }
 
 .nav-item {
-    font-size: var(--fs-16);  
+    font-size: var(--fs-16);
     text-decoration: none;
     font-weight: 700;
     display: flex;
@@ -308,7 +310,7 @@ select {
 
 .heading {
     text-align: center;
-    font-size: var(--fs-16);    
+    font-size: var(--fs-16);
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -320,12 +322,12 @@ select {
     line-height: 1.25;
 }
 
-.main-content {    
+.main-content {
     font-size: 1rem;
     line-height: 1.7;
     text-align: center;
     font-weight: 400;
-    max-width: 72ch;
+    max-width: 38ch;
     margin-inline: auto;
 }
 
@@ -338,11 +340,60 @@ select {
     height: 9.375rem;
     width: 9.375rem;
     margin-inline: auto;
-    margin-block: 2.5rem;   
+    margin-block: 2.5rem;
 }
 
 .btn:hover {
     box-shadow: 5px 5px 10px 55px hsla(0, 0%, 100%, 0.1);
+}
+
+/*--------------------------------------------*/
+/*------------   ENDING MOBILE----------------*/
+/* ----------------HOME PAGE----------------- */
+/*--------------------------------------------*/
+
+/*--------------------------------------------*/
+/* --------DESTINATION MOBILE PAGE----------- */
+/*--------------------------------------------*/
+.destination {
+    background-image: url("./assets/destination/background-destination-mobile.jpg");
+}
+
+[role="tablist"] {
+    padding: 0;
+    text-align: center;
+}
+
+[role="tablist"] li,
+[role="tablist"] a {
+    display: inline-block;
+}
+
+[role="tablist"] a {
+    text-decoration: none;
+    padding: 0.5rem;
+}
+
+[role="tablist"] [aria-selected] {
+    border: 2px solid hsl(var(--clr-light));
+   /* background: #fff; */
+    border-bottom: 0;
+    position: relative;
+    top: 2px;
+}
+
+[role="tabpanel"] {
+    border: 2px solid;
+    padding: 1.5rem;
+}
+
+[role="tabpanel"] *+* {
+    margin-top: 0.75rem;
+}
+
+*:focus {
+    outline: none;
+    box-shadow: inset 0 0 0 4px lightBlue;
 }
 
 @media screen and (min-width: 36.25rem) {
@@ -389,7 +440,7 @@ select {
 
     .navbar-collapse {
         display: block;
-        position: relative;       
+        position: relative;
         background-color: hsla(0, 0%, 100%, 0.04);
         padding-block: 2rem;
         height: auto;
@@ -397,7 +448,7 @@ select {
     }
 
     .navbar-nav {
-        padding-block-start: 0;       
+        padding-block-start: 0;
         padding-inline: 2rem;
         justify-content: space-around;
     }
@@ -405,11 +456,23 @@ select {
     .nav-item span {
         display: none;
     }
+
+    /*--------------------------------------------*/
+    /*------------   ENDING TABLET----------------*/
+    /* ----------------HOME PAGE----------------- */
+    /*--------------------------------------------*/
+
+    /*--------------------------------------------*/
+    /* --------DESTINATION TABLET PAGE----------- */
+    /*--------------------------------------------*/
+    .destination {
+        background-image: url("./assets/destination/background-destination-tablet.jpg");
+    }
 }
 
 @media screen and (min-width: 61.25rem) {
     .home {
-        background-image: url("./assets/home/background-home-desktop.jpg");       
+        background-image: url("./assets/home/background-home-desktop.jpg");
     }
 
     .container {
@@ -454,5 +517,17 @@ select {
     .main-content {
         font-size: var(--fs-18);
         text-align: left;
+    }
+
+    /*--------------------------------------------*/
+    /*------------   ENDING DESKTOP---------------*/
+    /* ----------------HOME PAGE----------------- */
+    /*--------------------------------------------*/
+
+    /*--------------------------------------------*/
+    /* --------DESTINATION DESKTOP PAGE---------- */
+    /*--------------------------------------------*/
+    .destination {
+        background-image: url("./assets/destination/background-destination-desktop.jpg");
     }
 }
