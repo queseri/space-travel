@@ -11,7 +11,9 @@
     --fs-18: 1.125rem;
     --fs-28: 1.75rem;
     --fs-32: 2rem;
+    --fs-56: 3.5rem;
     --fs-80: 5rem;
+    --fs-100: 6.25rem;
     --fs-150: 9.375rem;
     --ff-barlow: 'Barlow Condensed', sans-serif;
     --ff-bellefair: 'Bellefair', serif;
@@ -359,9 +361,26 @@ select {
     background-image: url("./assets/destination/background-destination-mobile.jpg");
 }
 
+.dest-container {
+    width: 100%;
+}
+
 [role="tablist"] {
     padding: 0;
     text-align: center;
+    margin-block-end: 1rem;
+}
+
+.tabbed {
+    margin-block-start: 3rem;
+}
+
+.tab-image-container {
+    margin-block: 2.5rem;
+}
+
+.tab-image {
+    margin-inline: auto;
 }
 
 [role="tablist"] li,
@@ -369,31 +388,60 @@ select {
     display: inline-block;
 }
 
+[role="tablist"] li+li {
+    padding-inline-end: 1rem;
+}
+
 [role="tablist"] a {
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-14);
     text-decoration: none;
     padding: 0.5rem;
+    color: var(--clr-white);
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 [role="tablist"] [aria-selected] {
     border: 2px solid hsl(var(--clr-light));
-   /* background: #fff; */
-    border-bottom: 0;
+    /* background: #fff; */
     position: relative;
     top: 2px;
 }
 
 [role="tabpanel"] {
-    border: 2px solid;
+    /* border: 2px solid; */
     padding: 1.5rem;
 }
 
 [role="tabpanel"] *+* {
-    margin-top: 0.75rem;
+   /* margin-top: 0.75rem; */
+}
+
+.tab-title {
+    text-align: center;
+    font-size: var(--fs-56);
+    text-transform: uppercase;
+}
+
+.extras {
+    border-top: 1px solid hsl(var(--clr-white));
+    padding-top: 2rem;
+    margin-top: 2rem;
 }
 
 *:focus {
     outline: none;
     box-shadow: inset 0 0 0 4px lightBlue;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+}
+
+.description-value {
+    font-size: var(--fs-28);
 }
 
 @media screen and (min-width: 36.25rem) {
@@ -529,5 +577,29 @@ select {
     /*--------------------------------------------*/
     .destination {
         background-image: url("./assets/destination/background-destination-desktop.jpg");
+    }
+
+    [role="tablist"] {
+        text-align: left;
+    }
+
+    [role="tabpanel"] *+* {
+       /* margin-top: 0; */
+    }
+
+    .panel-content-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tab-title {
+        text-align: left;
+        font-size: var(--fs-100);
+    }
+
+    .extras-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
