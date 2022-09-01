@@ -9,6 +9,7 @@
     --fs-14: 0.875rem;
     --fs-16: 1rem;
     --fs-18: 1.125rem;
+    --fs-20: 1.25rem;
     --fs-28: 1.75rem;
     --fs-32: 2rem;
     --fs-56: 3.5rem;
@@ -346,7 +347,7 @@ select {
 }
 
 .btn:hover {
-    box-shadow: 5px 5px 10px 55px hsla(0, 0%, 100%, 0.1);
+    box-shadow: 5px 5px 10px 55px hsl(var(--clr-light) / .1);
 }
 
 /*--------------------------------------------*/
@@ -363,6 +364,18 @@ select {
 
 .dest-container {
     width: 100%;
+}
+
+.heading-dest {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.heading-dest span {
+    font-size: var(--fs-16);
+    color: hsl(var(--clr-white) / .25);
+    font-weight: 700;
 }
 
 [role="tablist"] {
@@ -415,7 +428,7 @@ select {
 }
 
 [role="tabpanel"] *+* {
-   /* margin-top: 0.75rem; */
+    /* margin-top: 0.75rem; */
 }
 
 .tab-title {
@@ -489,7 +502,7 @@ select {
     .navbar-collapse {
         display: block;
         position: relative;
-        background-color: hsla(0, 0%, 100%, 0.04);
+        background-color: hsl(var(--clr-light) / .04);
         padding-block: 2rem;
         height: auto;
         top: 0;
@@ -515,6 +528,10 @@ select {
     /*--------------------------------------------*/
     .destination {
         background-image: url("./assets/destination/background-destination-tablet.jpg");
+    }
+
+    .heading-dest span {
+        font-size: var(--fs-20);
     }
 }
 
@@ -542,7 +559,7 @@ select {
         content: "";
         height: 1px;
         width: 45%;
-        background-color: hsla(0, 0%, 100%, 0.04);
+        background-color: hsl(var(--clr-light) / .04);
         left: -40%;
         top: 50%;
     }
@@ -584,7 +601,7 @@ select {
     }
 
     [role="tabpanel"] *+* {
-       /* margin-top: 0; */
+        /* margin-top: 0; */
     }
 
     .panel-content-wrapper {
@@ -601,5 +618,9 @@ select {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .heading-dest span {
+        font-size: var(--fs-28);
     }
 }
