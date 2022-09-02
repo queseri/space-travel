@@ -10,6 +10,7 @@
     --fs-16: 1rem;
     --fs-18: 1.125rem;
     --fs-20: 1.25rem;
+    --fs-24: 1.5rem;
     --fs-28: 1.75rem;
     --fs-32: 2rem;
     --fs-56: 3.5rem;
@@ -402,7 +403,7 @@ select {
 }
 
 [role="tablist"] li+li {
-    padding-inline-end: 1rem;
+    padding-inline-start: 1rem;
 }
 
 [role="tablist"] a {
@@ -469,6 +470,28 @@ select {
     background-image: url("./assets/crew/background-crew-mobile.jpg");
 }
 
+.crew [role="tablist"] a {
+    background-color: hsl(var(--clr-light));
+    border-radius: 50%;
+    padding: 0.25em;
+}
+
+.crew [role="tablist"] li+li {
+   /* padding-inline-end: 0; */
+}
+
+.crew-tab-title {
+    font-size: var(--fs-16);
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    color: hsl(var(--clr-light) / .1);
+}
+
+.tab-sub-title {
+    font-size: var(--fs-24);
+    color: hsl(var(--clr-light))
+}
 /*--------------------------------------------*/
 /* ------CREW MOBILE PAGE END  -------------- */
 /*--------------------------------------------*/
@@ -656,6 +679,7 @@ select {
     .heading-dest span {
         font-size: var(--fs-28);
     }
+
     /*--------------------------------------------*/
     /* ----DESTINATION DESKTOP PAGE END --------- */
     /*--------------------------------------------*/
