@@ -477,7 +477,7 @@ select {
 }
 
 .crew [role="tablist"] li+li {
-   /* padding-inline-end: 0; */
+    /* padding-inline-end: 0; */
 }
 
 .crew-tab-title {
@@ -485,13 +485,14 @@ select {
     display: flex;
     flex-direction: column;
     font-weight: 400;
-    color: hsl(var(--clr-light) / .1);
+    color: hsl(var(--clr-light) / .5);
 }
 
 .tab-sub-title {
     font-size: var(--fs-24);
     color: hsl(var(--clr-light))
 }
+
 /*--------------------------------------------*/
 /* ------CREW MOBILE PAGE END  -------------- */
 /*--------------------------------------------*/
@@ -584,6 +585,11 @@ select {
 
     .crew {
         background-image: url("./assets/crew/background-crew-tablet.jpg");
+    }
+
+    .crew-panel-content-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     /*--------------------------------------------*/
@@ -691,6 +697,14 @@ select {
 
     .crew {
         background-image: url("./assets/crew/background-crew-desktop.jpg");
+    }
+
+    .crew-panel-content-wrapper {
+        flex-direction: row-reverse;
+    }
+
+    .crew [role="tablist"] {
+        padding-inline: 1.5rem;
     }
 
     /*--------------------------------------------*/
