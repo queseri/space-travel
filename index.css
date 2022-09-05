@@ -13,6 +13,7 @@
     --fs-24: 1.5rem;
     --fs-28: 1.75rem;
     --fs-32: 2rem;
+    --fs-40: 2.5rem;
     --fs-56: 3.5rem;
     --fs-80: 5rem;
     --fs-100: 6.25rem;
@@ -253,6 +254,12 @@ select {
     z-index: 1;
 }
 
+.navbar-toggler:hover {
+    cursor: pointer;
+    outline: dashed hsl(var(--clr-light));
+    outline-offset: .15em;
+}
+
 .close {
     position: relative;
     top: 0;
@@ -273,6 +280,7 @@ select {
     font-weight: 400;
     line-height: 1.2;
     text-decoration: none;
+    transition: all 500ms ease-in-out;
 }
 
 .nav-link:hover:before {
@@ -336,19 +344,21 @@ select {
 }
 
 .btn {
-    display: block;
+    padding: 0 2em;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1;
     font-size: 1.25rem;
     border-radius: 50%;
     border: none;
     font-weight: 400;
-    height: 9.375rem;
-    width: 9.375rem;
     margin-inline: auto;
     margin-block: 2.5rem;
+    transition: all 500ms ease-in-out;
 }
 
 .btn:hover {
-    box-shadow: 5px 5px 10px 55px hsl(var(--clr-light) / .1);
+    box-shadow: 5px 5px 10px 55px hsl(var(--clr-white) / .15);
 }
 
 /*--------------------------------------------*/
@@ -418,9 +428,11 @@ select {
 
 [role="tablist"] [aria-selected] {
     border: 2px solid hsl(var(--clr-light));
-    /* background: #fff; */
+    /*
+     background: #fff; 
+     top: 2px;
+     */
     position: relative;
-    top: 2px;
 }
 
 [role="tabpanel"] {
@@ -428,9 +440,9 @@ select {
     padding: 1.5rem;
 }
 
-[role="tabpanel"] *+* {
-    /* margin-top: 0.75rem; */
-}
+/* [role="tabpanel"] *+* {
+   margin-top: 0.75rem; 
+}*/
 
 .tab-title {
     text-align: center;
@@ -476,9 +488,9 @@ select {
     padding: 0.25em;
 }
 
-.crew [role="tablist"] li+li {
-    /* padding-inline-end: 0; */
-}
+/* .crew [role="tablist"] li+li {
+   padding-inline-end: 0; 
+}*/
 
 .crew-tab-title {
     font-size: var(--fs-16);
@@ -497,6 +509,56 @@ select {
 /* ------CREW MOBILE PAGE END  -------------- */
 /*--------------------------------------------*/
 
+/*--------------------------------------------*/
+/* -----TECHNOLOGY MOBILE PAGE START ---------*/
+/*--------------------------------------------*/
+.tech {
+    background-image: url("./assets/technology/background-technology-mobile.jpg");
+}
+
+.tech [role="tabpanel"] {
+    padding: 0;
+
+}
+
+.tech [role="tablist"] a {
+    background-color: inherit;
+    border: 1px solid hsl(var(--clr-white));
+    font-size: var(--fs-16);
+    font-size: var(--ff-bellefair);
+    font-weight: 400;
+    border-radius: 50%;
+    padding: 0.25em;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech [role="tablist"] [aria-selected] {
+    background-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+}
+
+.tech [role="tablist"] a:focus {
+    background-color: hsl(var(--clr-white));
+    border: 1px solid hsl(var(--clr-white));
+    box-shadow: none;
+}
+
+.tech-tab-title {
+    font-size: var(--fs-14);
+    color: hsl(var(--clr-light) / 0.4);
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+/*--------------------------------------------*/
+/* -----TECHNOLOGY MOBILE PAGE END------------*/
+/*--------------------------------------------*/
+
 @media screen and (min-width: 36.25rem) {
     .flex {
         flex-direction: row;
@@ -504,8 +566,8 @@ select {
 
     .btn {
         font-size: var(--fs-32);
-        height: 15.125rem;
-        width: 15.125rem;
+        /* height: 15.125rem;
+        width: 15.125rem; */
     }
 
     .home {
@@ -589,11 +651,30 @@ select {
 
     .crew-panel-content-wrapper {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
+    }
+
+    .tab-sub-title {
+        font-size: var(--fs-40);
     }
 
     /*--------------------------------------------*/
     /* ------CREW TABLET PAGE END  -------------- */
+    /*--------------------------------------------*/
+
+    /*--------------------------------------------*/
+    /* -----TECHNOLOGY TABLET PAGE START ---------*/
+    /*--------------------------------------------*/
+    .tech {
+        background-image: url("./assets/technology/background-technology-tablet.jpg");
+    }
+
+    .tech-tab-title {
+        font-size: var(--fs-16);
+    }
+
+    /*--------------------------------------------*/
+    /* -----TECHNOLOGY TABLET PAGE END------------*/
     /*--------------------------------------------*/
 }
 
@@ -608,8 +689,8 @@ select {
 
     .btn {
         font-size: var(--fs-32);
-        height: 17.125rem;
-        width: 17.125rem;
+        /* height: 17.125rem;
+        width: 17.125rem; */
     }
 
     .nav-link {
@@ -662,9 +743,9 @@ select {
         text-align: left;
     }
 
-    [role="tabpanel"] *+* {
-        /* margin-top: 0; */
-    }
+    /* [role="tabpanel"] *+* {
+      margin-top: 0; 
+    }*/
 
     .panel-content-wrapper {
         display: flex;
@@ -707,7 +788,40 @@ select {
         padding-inline: 1.5rem;
     }
 
+    .crew-tab-title {
+        font-size: var(--fs-32);       
+    }
+
+    .tab-sub-title {
+        font-size: var(--fs-56);
+    }
+
+    .tab-divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+    }
+
     /*--------------------------------------------*/
     /* ------CREW DESKTOP PAGE END  ------------- */
+    /*--------------------------------------------*/
+
+    /*--------------------------------------------*/
+    /* -----TECHNOLOGY DESKTOP PAGE START --------*/
+    /*--------------------------------------------*/
+    .tech {
+        background-image: url("./assets/technology/background-technology-desktop.jpg");
+    }
+
+    .tech-tab-title {
+        font-size: var(--fs-16);
+    }
+
+    .tech-container {
+        padding-inline-start: 2.5rem;
+    }
+
+    /*--------------------------------------------*/
+    /* -----TECHNOLOGY DESKTOP PAGE END-----------*/
     /*--------------------------------------------*/
 }
