@@ -254,7 +254,8 @@ select {
     z-index: 1;
 }
 
-.navbar-toggler:hover {
+.navbar-toggler:hover,
+.navbar-toggler:focus {
     cursor: pointer;
     outline: dashed hsl(var(--clr-light));
     outline-offset: .15em;
@@ -322,7 +323,7 @@ select {
 
 .heading {
     text-align: center;
-    font-size: var(--fs-16);
+    font-size: var(--fs-16);   
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -331,15 +332,15 @@ select {
 
 .heading span {
     font-size: var(--fs-80);
-    line-height: 1.25;
+    line-height: 1.25;   
 }
 
 .main-content {
-    font-size: 1rem;
+    font-size: var(--fs-16);
     line-height: 1.7;
     text-align: center;
     font-weight: 400;
-    max-width: 38ch;
+    max-width: 45ch;
     margin-inline: auto;
 }
 
@@ -357,7 +358,8 @@ select {
     transition: all 500ms ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
     box-shadow: 5px 5px 10px 55px hsl(var(--clr-white) / .15);
 }
 
@@ -413,7 +415,7 @@ select {
 }
 
 [role="tablist"] li+li {
-    padding-inline-start: 1rem;
+    padding-inline-start: .5rem;
 }
 
 [role="tablist"] a {
@@ -789,7 +791,7 @@ select {
     }
 
     .crew-tab-title {
-        font-size: var(--fs-32);       
+        font-size: var(--fs-32);
     }
 
     .tab-sub-title {
@@ -799,7 +801,7 @@ select {
     .tab-divider {
         display: flex;
         flex-direction: column;
-        justify-content: center;        
+        justify-content: center;
     }
 
     /*--------------------------------------------*/
