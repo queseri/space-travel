@@ -217,6 +217,9 @@ select {
     text-transform: uppercase;
 }
 
+.body-js {
+    overflow-y: hidden;
+}
 /*--------------------------------------------*/
 /* ----------------HOME PAGE----------------- */
 /*--------------------------------------------*/
@@ -242,6 +245,8 @@ select {
     width: 67%;
     top: 2rem;
     transition: 0.4s;
+    background-color: hsl(var(--clr-white) / .05);
+    backdrop-filter: blur(.8rem);
 }
 
 .navbar-toggler {
@@ -281,7 +286,15 @@ select {
     font-weight: 400;
     line-height: 1.2;
     text-decoration: none;
+    outline: transparent;
     transition: all 500ms ease-in-out;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    border: transparent;
+    outline: dashed hsl(var(--clr-light));
+    outline-offset: .25em
 }
 
 .nav-link:hover:before {
@@ -318,12 +331,12 @@ select {
 }
 
 .main-container {
-    margin-block-start: 2.5rem;
+    margin-block: 2.5rem;
 }
 
 .heading {
     text-align: center;
-    font-size: var(--fs-16);   
+    font-size: var(--fs-16);
     font-weight: 400;
     display: flex;
     flex-direction: column;
@@ -332,7 +345,7 @@ select {
 
 .heading span {
     font-size: var(--fs-80);
-    line-height: 1.25;   
+    line-height: 1.25;
 }
 
 .main-content {
@@ -430,10 +443,6 @@ select {
 
 [role="tablist"] [aria-selected] {
     border: 2px solid hsl(var(--clr-light));
-    /*
-     background: #fff; 
-     top: 2px;
-     */
     position: relative;
 }
 
@@ -459,8 +468,11 @@ select {
 }
 
 *:focus {
-    outline: none;
-    box-shadow: inset 0 0 0 4px lightBlue;
+    border: transparent;
+    outline: dashed hsl(var(--clr-light));
+    outline-offset: .25em;
+    /* outline: none;
+    box-shadow: inset 0 0 0 4px lightBlue;*/
 }
 
 .description {
@@ -485,9 +497,14 @@ select {
 }
 
 .crew [role="tablist"] a {
-    background-color: hsl(var(--clr-light));
+    background-color: hsl(var(--clr-light)/ .5);
     border-radius: 50%;
-    padding: 0.25em;
+    padding: 0.35em;
+}
+
+.crew [role="tablist"] [aria-selected] {
+    border: none;
+    background-color: hsl(var(--clr-white));
 }
 
 /* .crew [role="tablist"] li+li {
@@ -562,6 +579,9 @@ select {
 /*--------------------------------------------*/
 
 @media screen and (min-width: 36.25rem) {
+    .body-js {
+        overflow-y: scroll;
+    }
     .flex {
         flex-direction: row;
     }
@@ -788,6 +808,7 @@ select {
 
     .crew [role="tablist"] {
         padding-inline: 1.5rem;
+        text-align: center;
     }
 
     .crew-tab-title {
