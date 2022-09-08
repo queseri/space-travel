@@ -220,6 +220,7 @@ select {
 .body-js {
     overflow-y: hidden;
 }
+
 /*--------------------------------------------*/
 /* ----------------HOME PAGE----------------- */
 /*--------------------------------------------*/
@@ -257,6 +258,7 @@ select {
     justify-content: center;
     align-self: center;
     z-index: 1;
+    transition: all 500ms ease-in-out;
 }
 
 .navbar-toggler:hover,
@@ -358,7 +360,7 @@ select {
 }
 
 .btn {
-    padding: 0 2em;
+    padding: 2em;
     display: grid;
     place-items: center;
     aspect-ratio: 1;
@@ -439,6 +441,7 @@ select {
     color: var(--clr-white);
     text-decoration: none;
     text-transform: uppercase;
+    transition: all 500ms ease-in-out;
 }
 
 [role="tablist"] [aria-selected] {
@@ -553,6 +556,7 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 500ms ease-in-out;
 }
 
 .tech [role="tablist"] [aria-selected] {
@@ -582,6 +586,7 @@ select {
     .body-js {
         overflow-y: scroll;
     }
+
     .flex {
         flex-direction: row;
     }
