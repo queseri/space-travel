@@ -11,11 +11,11 @@ const menuControl = () => {
     hamburger.classList.toggle("hide-icon-js")
     if (menuBtn.classList.contains("show-menu-js")) {
         menuBtn.setAttribute("aria-expanded", true)
-        navMenu.classList.add("show-menu-js")
+        navMenu.classList.add("show-menu-list-js")
         body.classList.add("body-js")
     } else {
         menuBtn.setAttribute("aria-expanded", false)
-        navMenu.classList.remove("show-menu-js")
+        navMenu.classList.remove("show-menu-list-js")
         body.classList.remove("body-js")
     }
 }

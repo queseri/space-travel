@@ -82,6 +82,7 @@ body {
     line-height: 1.5;
     font-family: var(--ff-bellefair);
     font-weight: 400;
+    overflow-x: hidden;
 }
 
 /* A elements that don't have a class get default styles */
@@ -245,9 +246,10 @@ select {
     right: 0;
     width: 67%;
     top: 2rem;
-    transition: 0.4s;
     background-color: hsl(var(--clr-white) / .05);
     backdrop-filter: blur(.8rem);
+    transform: translateX(100%);
+    transition: transform 500ms ease-in-out;
 }
 
 .navbar-toggler {
@@ -259,6 +261,15 @@ select {
     align-self: center;
     z-index: 1;
     transition: all 500ms ease-in-out;
+}
+
+.show-menu-js {
+    display: block;
+}
+
+.show-menu-list-js {
+    display: block;
+    transform: translateX(0%);
 }
 
 .navbar-toggler:hover,
@@ -276,10 +287,6 @@ select {
 
 .hide-icon-js {
     display: none;
-}
-
-.show-menu-js {
-    display: block;
 }
 
 .nav-link {
@@ -305,7 +312,7 @@ select {
     width: 100%;
     height: 3px;
     background: hsl(var(--clr-light));
-    bottom: -2rem;
+    bottom: -2.5rem;
 }
 
 .nav-link:focus:before {
@@ -332,9 +339,10 @@ select {
     gap: 1rem;
 }
 
+/*
 .main-container {
     margin-block: 2.5rem;
-}
+}*/
 
 .heading {
     text-align: center;
@@ -624,15 +632,21 @@ select {
         line-height: 1.25;
     }
 
+    .nav {
+        margin-top: -1.5rem;
+        margin-right: -3rem;
+    }
+
     .navbar-toggler {
         display: none;
     }
 
     .navbar-collapse {
         display: block;
+        transform: translateX(0%);
         position: relative;
         background-color: hsl(var(--clr-light) / .04);
-        padding-block: 2rem;
+        padding-block: 2.5rem;
         height: auto;
         top: 0;
     }
@@ -659,8 +673,20 @@ select {
         background-image: url("./assets/destination/background-destination-tablet.jpg");
     }
 
+    .destination .main {
+        margin-block-start: 2.5rem;
+    }
+
+    .heading-dest {
+        justify-content: flex-start;
+    }
+
     .heading-dest span {
         font-size: var(--fs-20);
+    }
+
+    .tab-image {
+        max-width: 18.75rem;
     }
 
     /*--------------------------------------------*/
@@ -700,6 +726,11 @@ select {
         font-size: var(--fs-16);
     }
 
+    .heading-tech {
+        justify-content: flex-start;
+        padding-inline: 2rem;
+    }
+
     /*--------------------------------------------*/
     /* -----TECHNOLOGY TABLET PAGE END------------*/
     /*--------------------------------------------*/
@@ -714,14 +745,25 @@ select {
         padding-block: 2.5rem;
     }
 
+    .nav {
+        margin-top: 0;
+        margin-right: 0;
+    }
+
     .btn {
         font-size: var(--fs-32);
-        /* height: 17.125rem;
-        width: 17.125rem; */
     }
 
     .nav-link {
         font-size: var(--fs-16);
+    }
+
+    .nav-item {
+        align-items: baseline;
+    }
+
+    .nav-item span {
+        display: block;
     }
 
     .navbar-collapse::before {
@@ -777,6 +819,10 @@ select {
     .panel-content-wrapper {
         display: flex;
         justify-content: space-between;
+    }
+
+    .tab-image {
+        max-width: 27.8rem;
     }
 
     .tab-title {
