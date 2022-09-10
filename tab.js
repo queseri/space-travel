@@ -5,7 +5,7 @@
     const tabs = tablist.querySelectorAll('a');
     const panels = tabbed.querySelectorAll('[id^="section"]');
 
-    // Animate the tabs content when tab selected
+    // Animate the tabs content when tab selected using gsap
     const animateTabs = () => {
         const timeLine2 = gsap.timeline();
         timeLine2.

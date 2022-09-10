@@ -68,12 +68,6 @@ html:focus-within {
     scroll-behavior: smooth;
 }
 
-/*
-html {
-     color-scheme: none !important; 
-}
-*/
-
 /* Set core body defaults */
 body {
     border-color: transparent;
@@ -223,7 +217,8 @@ select {
 }
 
 /*--------------------------------------------*/
-/* ----------------HOME PAGE----------------- */
+/* -----------HOME PAGE MOBILE--------------- */
+/*-------------AND GENERAL STYLES-------------*/
 /*--------------------------------------------*/
 .home {
     background-image: url("./assets/home/background-home-mobile.jpg");
@@ -240,11 +235,11 @@ select {
 
 .navbar-collapse {
     opacity: 0.9;
-    display: none;
+   /* display: none; */
     position: absolute;
     height: 100vh;
-    right: 0;
-    width: 67%;
+    right: -2rem;
+    width: 70%;
     top: 2rem;
     background-color: hsl(var(--clr-white) / .05);
     backdrop-filter: blur(.8rem);
@@ -380,6 +375,7 @@ select {
     margin-block: 2.5rem;
     transition: all 500ms ease-in-out;
     aspect-ratio: 1;
+    /* not working on all browsers*/
     min-width: 9.375rem;
     min-height: 9.375rem;
 }
@@ -400,6 +396,7 @@ select {
 /*--------------------------------------------*/
 /*------------   ENDING MOBILE----------------*/
 /* ----------------HOME PAGE----------------- */
+/*-------------AND GENERAL STYLES-------------*/
 /*--------------------------------------------*/
 
 /*--------------------------------------------*/
@@ -469,13 +466,8 @@ select {
 }
 
 [role="tabpanel"] {
-    /* border: 2px solid; */
     padding: 1.5rem;
 }
-
-/* [role="tabpanel"] *+* {
-   margin-top: 0.75rem; 
-}*/
 
 .tab-title {
     text-align: center;
@@ -493,8 +485,6 @@ select {
     border: transparent;
     outline: dashed hsl(var(--clr-light));
     outline-offset: .25em;
-    /* outline: none;
-    box-shadow: inset 0 0 0 4px lightBlue;*/
 }
 
 .description {
@@ -529,10 +519,6 @@ select {
     background-color: hsl(var(--clr-white));
 }
 
-/* .crew [role="tablist"] li+li {
-   padding-inline-end: 0; 
-}*/
-
 .crew-tab-title {
     font-size: var(--fs-16);
     display: flex;
@@ -559,7 +545,6 @@ select {
 
 .tech [role="tabpanel"] {
     padding: 0;
-
 }
 
 .tech [role="tablist"] a {
@@ -601,6 +586,11 @@ select {
 /* -----TECHNOLOGY MOBILE PAGE END------------*/
 /*--------------------------------------------*/
 
+/*--------------------------------------------*/
+/* -----------HOME PAGE TABLET--------------- */
+/*-------------AND GENERAL STYLES-------------*/
+/*--------------------------------------------*/
+
 @media screen and (min-width: 36.25rem) {
     .body-js {
         overflow-y: scroll;
@@ -612,8 +602,6 @@ select {
 
     .btn {
         font-size: var(--fs-32);
-        /* height: 15.125rem;
-        width: 15.125rem; */
     }
 
     .home {
@@ -677,8 +665,8 @@ select {
     }
 
     /*--------------------------------------------*/
-    /*------------   ENDING TABLET----------------*/
-    /* ----------------HOME PAGE----------------- */
+    /* --------ENDING HOME PAGE TABLET----------- */
+    /*-------------AND GENERAL STYLES-------------*/
     /*--------------------------------------------*/
 
     /*--------------------------------------------*/
@@ -700,11 +688,6 @@ select {
         font-size: var(--fs-20);
     }
 
-    /*
-    .tab-image {
-        max-width: 18.75rem;
-    }
-*/
     /*--------------------------------------------*/
     /* ----DESTINATION TABLET PAGE END  --------- */
     /*--------------------------------------------*/
@@ -761,6 +744,11 @@ select {
 }
 
 @media screen and (min-width: 61.25rem) {
+
+    /*--------------------------------------------*/
+    /* -----------HOME PAGE DESKTOP-------------- */
+    /*-------------AND GENERAL STYLES-------------*/
+    /*--------------------------------------------*/
     .home {
         background-image: url("./assets/home/background-home-desktop.jpg");
     }
@@ -821,8 +809,8 @@ select {
     }
 
     /*--------------------------------------------*/
-    /*------------   ENDING DESKTOP---------------*/
-    /* ----------------HOME PAGE----------------- */
+    /* --------ENDING HOME PAGE DESKTOP---------- */
+    /*-------------AND GENERAL STYLES-------------*/
     /*--------------------------------------------*/
 
     /*--------------------------------------------*/
@@ -838,10 +826,6 @@ select {
         text-align: left;
         padding-inline-start: 2rem;
     }
-
-    /* [role="tabpanel"] *+* {
-      margin-top: 0; 
-    }*/
 
     .panel-content-wrapper {
         display: flex;
