@@ -380,6 +380,7 @@ select {
     margin-inline: auto;
     margin-block: 2.5rem;
     transition: all 500ms ease-in-out;
+    aspect-ratio: 1;
 }
 
 .btn:hover,
@@ -617,7 +618,7 @@ select {
         max-width: 69.375rem;
         margin-inline: auto;
     }
-    
+
     .main-hide-js {       
        z-index: 1;
     }
