@@ -34,7 +34,7 @@ timeLine.
             backgroundColor: "#fff"
         }
     ).
-    fromTo(['h1', 'h2', '.main-content', '.tabbed li', '.tab-image'],
+    fromTo(['h1', 'h2', '.call-to-action', '.main-content', '.tabbed li', '.tab-image', '.footer'],
         {
             opacity: 0,
             y: -20
