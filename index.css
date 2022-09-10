@@ -702,6 +702,10 @@ select {
         background-image: url("./assets/crew/background-crew-tablet.jpg");
     }
 
+    .crew .main {
+        margin-block-start: 2.5rem;
+    }
+
     .crew-panel-content-wrapper {
         display: flex;
         flex-direction: column;
@@ -720,6 +724,10 @@ select {
     /*--------------------------------------------*/
     .tech {
         background-image: url("./assets/technology/background-technology-tablet.jpg");
+    }
+
+    .tech .main {
+        margin-block-start: 2.5rem;
     }
 
     .tech-tab-title {

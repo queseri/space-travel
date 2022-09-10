@@ -5,6 +5,26 @@
     const tabs = tablist.querySelectorAll('a');
     const panels = tabbed.querySelectorAll('[id^="section"]');
 
+    // Animate the tabs content when tab selected
+    const animateTabs = () => {
+        const timeLine2 = gsap.timeline();
+        timeLine2.
+            fromTo(['.tab-image', '.tab-title', '.tab-divider .main-content'],
+                {
+                    opacity: 0,
+                    y: -20
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.6,
+                    ease: 'power1.out',
+                    delay: 1.5,
+                    stagger: 0.2
+                },
+                '-=1')
+    }
+
     // The tab switching function
     const switchTab = (oldTab, newTab) => {
         newTab.focus();
@@ -39,6 +59,7 @@
             let currentTab = tablist.querySelector('[aria-selected]');
             if (e.currentTarget !== currentTab) {
                 switchTab(currentTab, e.currentTarget);
+                animateTabs();
             }
         });
 
@@ -54,6 +75,7 @@
                 // If the down key is pressed, move focus to the open panel,
                 // otherwise switch to the adjacent tab
                 dir === 'down' ? panels[i].focus() : tabs[dir] ? switchTab(e.currentTarget, tabs[dir]) : void 0;
+                animateTabs();
             }
         });
     });
