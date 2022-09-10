@@ -700,10 +700,11 @@ select {
         font-size: var(--fs-20);
     }
 
+    /*
     .tab-image {
         max-width: 18.75rem;
     }
-
+*/
     /*--------------------------------------------*/
     /* ----DESTINATION TABLET PAGE END  --------- */
     /*--------------------------------------------*/
@@ -832,7 +833,10 @@ select {
     }
 
     [role="tablist"] {
+        align-self: flex-end;
+        width: 50%;
         text-align: left;
+        padding-inline-start: 2rem;
     }
 
     /* [role="tabpanel"] *+* {
@@ -842,6 +846,15 @@ select {
     .panel-content-wrapper {
         display: flex;
         justify-content: space-between;
+        gap: 4rem;
+    }
+
+    .tab-image-container {
+        flex: 1 1 50%;
+    }
+
+    .tab-divider {
+        flex: 1 1 50%;
     }
 
     .tab-image {
@@ -863,6 +876,11 @@ select {
         font-size: var(--fs-28);
     }
 
+    .tabbed {
+        display: flex;
+        flex-direction: column;
+    }
+
     /*--------------------------------------------*/
     /* ----DESTINATION DESKTOP PAGE END --------- */
     /*--------------------------------------------*/
@@ -880,9 +898,14 @@ select {
         flex-direction: row-reverse;
     }
 
+    .crew .tabbed {
+        flex-direction: column-reverse;
+    }
+
     .crew [role="tablist"] {
         padding-inline: 1.5rem;
-        text-align: center;
+        text-align: left;
+        align-self: flex-start;
     }
 
     .crew-tab-title {
