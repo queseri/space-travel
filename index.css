@@ -339,11 +339,6 @@ select {
     gap: 1rem;
 }
 
-/*
-.main-container {
-    margin-block: 2.5rem;
-}*/
-
 .heading {
     text-align: center;
     font-size: var(--fs-16);
@@ -356,6 +351,12 @@ select {
 .heading span {
     font-size: var(--fs-80);
     line-height: 1.25;
+}
+
+/* main page to be behind the navigation when nav is open*/
+.main-hide-js {
+    position: relative;
+   z-index: -1;
 }
 
 .main-content {
@@ -615,6 +616,10 @@ select {
         margin-block-start: 8rem;
         max-width: 69.375rem;
         margin-inline: auto;
+    }
+    
+    .main-hide-js {       
+       z-index: 1;
     }
 
     .main-content {

@@ -1,22 +1,25 @@
-const menuBtn = document.querySelector(".menu-btn-js")
+const menuBtn = document.querySelector(".menu-btn-js");
 
 const menuControl = () => {
-    const closeIcon = document.querySelector(".close")
-    const hamburger = document.querySelector(".hamburger")
-    const navMenu = document.querySelector(".navbar-collapse")
-    const body = document.querySelector("body")
+    const closeIcon = document.querySelector(".close");
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".navbar-collapse");
+    const body = document.querySelector("body");
+    const main = document.querySelector(".main");
     console.log("button clicked")
-    menuBtn.classList.toggle("show-menu-js")
-    closeIcon.classList.toggle("hide-icon-js")
-    hamburger.classList.toggle("hide-icon-js")
+    menuBtn.classList.toggle("show-menu-js");
+    closeIcon.classList.toggle("hide-icon-js");
+    hamburger.classList.toggle("hide-icon-js");
     if (menuBtn.classList.contains("show-menu-js")) {
-        menuBtn.setAttribute("aria-expanded", true)
-        navMenu.classList.add("show-menu-list-js")
-        body.classList.add("body-js")
+        menuBtn.setAttribute("aria-expanded", true);
+        navMenu.classList.add("show-menu-list-js");
+        main.classList.add("main-hide-js");
+        body.classList.add("body-js");
     } else {
-        menuBtn.setAttribute("aria-expanded", false)
-        navMenu.classList.remove("show-menu-list-js")
-        body.classList.remove("body-js")
+        menuBtn.setAttribute("aria-expanded", false);
+        navMenu.classList.remove("show-menu-list-js");
+        main.classList.remove("main-hide-js");
+        body.classList.remove("body-js");
     }
 }
 
