@@ -638,7 +638,7 @@ select {
 
     .nav {
         margin-top: -1.5rem;
-        margin-right: -3rem;
+        margin-right: 0;
     }
 
     .navbar-toggler {
