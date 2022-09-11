@@ -235,7 +235,7 @@ select {
 
 .navbar-collapse {
     opacity: 0.9;
-   /* display: none; does not work with transitions */ 
+    /* display: none; does not work with transitions */
     position: absolute;
     height: 100vh;
     right: -2rem;
@@ -551,12 +551,12 @@ select {
     background-color: inherit;
     border: 1px solid hsl(var(--clr-white));
     font-size: var(--fs-16);
-    font-size: var(--ff-bellefair);
+    font-family: var(--ff-bellefair);
     font-weight: 400;
     border-radius: 50%;
     padding: 0.25em;
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -890,6 +890,8 @@ select {
         padding-inline: 1.5rem;
         text-align: left;
         align-self: flex-start;
+        top: -4rem;
+        position: relative;
     }
 
     .crew-tab-title {
@@ -917,6 +919,36 @@ select {
         background-image: url("./assets/technology/background-technology-desktop.jpg");
     }
 
+    .tech .tabbed {
+        flex-direction: row;
+    }
+
+    .tech [role="tablist"] li+li {
+        padding-inline-start: 0;
+    }
+
+    .tech .main {
+        max-width: 79.68rem;
+    }
+
+    .tech [role="tablist"] {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        flex: 1 1 20%;
+    }
+
+    .tech [role="tabpanel"] {
+        flex: 1 1 80%;
+    }
+
+    .tech [role="tablist"] a {
+        width: 5rem;
+        height: 5rem;
+        font-size: var(--fs-32);
+    }
+
     .tech-tab-title {
         font-size: var(--fs-16);
     }
@@ -928,4 +960,10 @@ select {
     /*--------------------------------------------*/
     /* -----TECHNOLOGY DESKTOP PAGE END-----------*/
     /*--------------------------------------------*/
+}
+
+@media screen and (min-width: 80rem) {
+    .tech-container {
+        padding-inline-start: 10.3rem;
+    }
 }
