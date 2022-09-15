@@ -76,6 +76,7 @@ Another aspect that was interesting to learn from this challenge was to do with 
 
 ### Continued development
 
+The technology page will need improvement to match design
 
 ### Useful resources
 
