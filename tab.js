@@ -23,6 +23,9 @@
                     stagger: 0.2
                 },
                 '-=1')
+                .to('.destination .tab-image', {
+                    rotation: 360, transformOrigin: "center", ease: "none", duration: 10
+                })
     }
 
     // The tab switching function
