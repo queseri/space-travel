@@ -236,7 +236,7 @@ select {
 
 .navbar-collapse {
     opacity: 0.9;
-     display: none; /*does not work with transitions */
+     /* display: none; does not work with transitions */
     position: absolute;
     height: 100vh;
     right: -2rem;
